@@ -7,7 +7,7 @@ class Home extends Component {
 
 
     getData = (e) => {
-        this.props.update(e.target.value, this.props.posts);
+        this.props.update(e.target.value);
     }
     render() {
         return (
