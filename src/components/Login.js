@@ -22,7 +22,7 @@ class Login extends Component {
     submitHandle = (e) => {
         e.preventDefault();
         console.log(this.props.posts);
-        if (this.props.posts.email === this.state.email && this.props.posts.password === this.state.password) {
+        if (this.props.posts.signUpData.email === this.state.email && this.props.posts.signUpData.password === this.state.password) {
             this.props.history.push('/home');
         }
         else {

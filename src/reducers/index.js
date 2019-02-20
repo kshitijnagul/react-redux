@@ -5,11 +5,13 @@ const submitData = (state = {}, action) => {
     const result = { signUpData: {}, home: '' }
     switch (action.type) {
         case SIGN_UP:
-            const signupData = Object.assign(result.signUpData, action.payload);
-            console.log('reducer', signupData);
-            return signupData;
+            //const signUpData = Object.assign(result, { signUpData: action.payload });
+            const signUpData = { ...result, signUpData: action.payload }
+            console.log('reducer', signUpData);
+            return signUpData;
         case ADD_STRING:
-            const addNewString = Object.assign({}, state, { home: action.payload });
+            //const addNewString = Object.assign({}, state, { home: action.payload });
+            const addNewString = { ...state, home: action.payload }
             console.log('reducer', addNewString);
             return addNewString;
         default:

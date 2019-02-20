@@ -15,13 +15,14 @@ class Signup extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.history.push('/login');
+        console.log('while passing the state', this.state);
         this.props.update(this.state);
 
     }
 
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
-        console.log(this.state);
+        //console.log(this.state);
     }
     render() {
         return (
